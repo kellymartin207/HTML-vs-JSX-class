@@ -1,9 +1,15 @@
+/* ==========================================================================
+   Reset & base
+   ========================================================================== */
+
+/* Remove default margins/padding; consistent box model */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page: centered layout, off-white background, Inter font */
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     background-color: #f7f7f4;
@@ -14,6 +20,11 @@ body {
     padding: 20px;
 }
 
+/* ==========================================================================
+   Cards layout
+   ========================================================================== */
+
+/* Horizontal row of pricing cards; 24px gap, no wrap */
 .cards-container {
     display: flex;
     flex-direction: row;
@@ -23,6 +34,7 @@ body {
     align-items: flex-start;
 }
 
+/* Single pricing card: 320px wide, min 380px tall, cream background */
 .card {
     display: flex;
     flex-direction: column;
@@ -34,6 +46,7 @@ body {
     flex-shrink: 0;
 }
 
+/* Card header: plan name + price */
 .card-top {
     display: flex;
     flex-direction: column;
@@ -47,6 +60,7 @@ body {
     margin-bottom: 8px;
 }
 
+/* Price row: amount + period (e.g. /month) */
 .card-price {
     font-size: 20px;
     color: rgba(38, 37, 30, 0.5);
@@ -65,10 +79,15 @@ body {
     color: rgba(38, 37, 30, 0.5);
 }
 
+/* ==========================================================================
+   Card body: “Includes” + feature list
+   ========================================================================== */
+
 .card-content {
     margin-bottom: 32px;
 }
 
+/* “Includes” label above the list */
 .includes-text {
     font-size: 16px;
     color: rgba(38, 37, 30, 0.5);
@@ -88,6 +107,7 @@ body {
     color: #26251e;
 }
 
+/* Icon before each feature (checkmark) */
 .checkmark {
     color: #26251e;
     font-size: 14px;
@@ -95,6 +115,11 @@ body {
     font-weight: 400;
 }
 
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+/* Default: pill shape, sits at bottom of card (margin-top: auto) */
 .download-button {
     margin-top: auto;
     width: fit-content;
@@ -117,6 +142,7 @@ body {
     background-color: #D8D6CE;
 }
 
+/* Primary/CTA: dark background, white text */
 .download-button.primary {
     background-color: #111;
     color: #fff;
@@ -129,6 +155,10 @@ body {
 .download-button.primary:active {
     background-color: #333;
 }
+
+/* ==========================================================================
+   Page label (fixed badge, e.g. “HTML” / “JSX”)
+   ========================================================================== */
 
 .page-label {
     position: fixed;
